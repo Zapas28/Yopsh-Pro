@@ -546,7 +546,8 @@ a {
     margin-left: 86.5%;
 }
 .image-url{
-	width: 90%;
+	width: 320px;
+    height: 180px;
     text-align: center;
     margin-top: 15px;
     margin-bottom: 10px;
@@ -578,7 +579,6 @@ a {
 .remove-button{
 	background-color: #ff4d4d;
     color: white;
-    margin-left: 10px;
     margin-bottom: 10px;
     border: none;
     padding: 5px 10px;
