@@ -1,0 +1,84 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://kit.fontawesome.com/8aa17a250d.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" type="text/css" href="style.css">
+<div class="header">
+    <img src="https://i.ibb.co/vckRpWn/icon.png" class="app-icon">
+    <button class="arrow-up"><a href="review_upload.html"><i class="fa-solid fa-cloud-arrow-up"></i></a></button>
+</div>
+<hr class="head-hr">
+<div class="loader" id="loader">
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+</div>
+<div id="questionsContainer"></div>
+<div id="alertMessage"></div>
+<script src="review.js"></script>
+<style>
+    .loader{
+        position: fixed;
+        left: 50%;
+        top: 50%;
+    }
+    .username-text,.time-stamp,.question{
+        font-size: 20px;
+        margin-left: 20px;
+    }
+    .username-text,.question{
+        margin-top: -18px;
+    }
+    .comments{
+        margin-left: 20px;
+        font-size: 20px;
+    }
+    .comments-hero{
+        margin-top: -26px;
+        margin-left: 20px;
+        font-size: 17px;
+        height: auto;
+        margin-bottom: 15px;
+        max-height: 75px;
+        overflow-y: scroll;
+    }
+    .publish-btn, .close-btn{
+        margin-left: 10px;
+        border: none;
+        margin-bottom: 12px;
+        margin-top: -3px;
+        background: transparent;
+    }
+    .close-btn{
+        margin-left: 68%;
+    }
+    .head-r{
+        margin-top: 20px;
+        width: 84%;
+        margin-left: 17px;
+    }
+    .commentBox{
+        display: none;
+        border-radius: 20px;
+        margin-top: 13px;
+        width: 93%;
+        background: #0b142d;
+        border-radius: 10px;
+    }
+    #alertMessage {
+        width: 80%;
+        padding: 10px;
+        margin-top: 10px;
+        border-radius: 4px;
+        margin-left: 5%;
+    }
+    #alertMessage.success {
+        background-color: #dff0d8;
+        color: #3c763d;
+        border-color: #d6e9c6;
+    }
+    #alertMessage.error {
+        background-color: #f2dede;
+        color: #a94442;
+        border-color: #ebccd1;
+    }
+</style>
