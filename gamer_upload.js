@@ -32,7 +32,7 @@ document.getElementById('gamerForm').addEventListener('submit', function (e) {
     const timestamp = new Date().toISOString();
     const username = localStorage.getItem('YopshLoc_Username');
     if (!username) {
-        displayMessage('gamerMessage', 'No username found in local storage.', 'red');
+        displayMessage('gamerMessage', 'No username found!', 'red');
         return;
     }
     const data = {
@@ -68,7 +68,7 @@ document.getElementById('developerForm').addEventListener('submit', async functi
     const timestamp = new Date().toISOString();
     const username = localStorage.getItem('YopshLoc_Username');
     if (!username) {
-        displayMessage('developerMessage', 'No username found.', 'red');
+        displayMessage('developerMessage', 'No username found!', 'red');
         document.getElementById('developerLoader').style.display = 'none'; // Hide the loader if there's an error
         return;
     }
