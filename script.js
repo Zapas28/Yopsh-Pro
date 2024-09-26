@@ -1,20 +1,39 @@
-function reload() {
-        setActiveButton('btnReload');
-        location.reload();
-    }
+// Get elements
+const menuBtn = document.getElementById('menuBtn');
+const footerBtn = document.getElementById('footerBtn');
+const sliderMenu = document.getElementById('sliderMenu');
+const sliderFooter = document.getElementById('sliderFooter');
+const overlay = document.getElementById('overlay');
 
-    function openDiv(divNumber) {
-        setActiveButton(divNumber === 2 ? 'btnGame' : 'btnFire');
-        document.querySelectorAll('.content-div').forEach(div => {
-            div.style.display = 'none';
-            div.style.opacity = '0';
-        });
-        const div = document.getElementById(`div${divNumber}`);
-        div.style.display = 'block';
-        setTimeout(() => div.style.opacity = '1', 0);  // Trigger the CSS animation
-    }
+// Function to close sliders
+function closeSliders() {
+    sliderMenu.classList.remove('show');
+    sliderFooter.classList.remove('show');
+    overlay.classList.remove('active');
+}
 
-    function setActiveButton(buttonId) {
-        document.querySelectorAll('footer button').forEach(button => button.classList.remove('active'));
-        document.getElementById(buttonId).classList.add('active');
+// Toggle left slider and overlay
+menuBtn.addEventListener('click', function() {
+    sliderMenu.classList.toggle('show');
+    overlay.classList.toggle('active');
+});
+
+// Toggle footer slider and overlay
+footerBtn.addEventListener('click', function(event) {
+    event.preventDefault(); // Prevent default link action
+    sliderFooter.classList.toggle('show');
+    overlay.classList.toggle('active');
+});
+
+// Close sliders if overlay is clicked
+overlay.addEventListener('click', function() {
+    closeSliders();
+});
+
+// Close sliders if user clicks anywhere on the body outside the sliders
+document.body.addEventListener('click', function(event) {
+    if (!sliderMenu.contains(event.target) && !menuBtn.contains(event.target) &&
+        !sliderFooter.contains(event.target) && !footerBtn.contains(event.target)) {
+        closeSliders();
     }
+});
