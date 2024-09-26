@@ -4,7 +4,7 @@
     overflow-x: hidden;
 }
 body {
-    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    background: #FFF;
     padding: 0;
     font-family: "Tajawal", sans-serif;
     font-weight: 300;
@@ -14,6 +14,8 @@ body {
     font-family: "Schoolbell", cursive;
     display: flex;
     width: 100%;
+    overflow: hidden;
+    height: 7%;
     align-items: center;
 }
 .header h2 {
@@ -21,9 +23,9 @@ body {
     font-size: 20px;
 }
 .app-icon {
-    margin-left: 5%;
-    width: 50px;
-    margin-top: 10px;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    margin-left: 2%;
+    width: 35px;
     border-radius: 125px;
 }
 .content-div {
@@ -122,7 +124,6 @@ a {
 .user{
 	width: 24px;
     margin-top: 6px;
-    margin-left: 64%;
     max-width: 400px;
     height: 24px;
 }
@@ -131,6 +132,11 @@ a {
 }
 .header a {
     font-size: 26px;
+    margin-left: -14px;
+    margin-top: -10px;
+    cursor: pointer;
+    width: 50px;
+    text-align: center;
 }
 #userDetails {
       display: none;
@@ -685,3 +691,106 @@ a {
     background: none;
     border: none;
 }
+.menu {
+    display: flex;
+    cursor: pointer;
+}
+
+.user {
+    cursor: pointer;
+}
+.slider-menu {
+    position: fixed;
+    left: -250px;
+    top: 7.4%; 
+    width: 250px;
+    height: calc(100% - 60px); 
+    background-color: #FFF;
+    transition: 0.5s ease;
+    z-index: 1001;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.slider-footer {
+    position: fixed;
+    bottom: -250px; 
+    left: 0;
+    width: 100%;
+    height: 250px;
+    background-color: #FFF;
+    transition: 0.5s ease;
+    z-index: 1001; 
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.slider-menu.show {
+    left: 0;
+}
+
+.slider-footer.show {
+    bottom: -10%;
+    border-radius: 25px;
+}
+.overlay {
+    position: fixed;
+    top: 60px; 
+    left: 0;
+    width: 100%;
+    height: calc(100% - 60px); 
+    background-color: rgba(0, 0, 0, 0.1); 
+    z-index: 1000;
+    display: none; 
+}
+
+.overlay.active {
+    display: block;
+}
+.menu .material-symbols-outlined{
+    font-size: 32px;
+    overflow: hidden;
+    margin-left: 10px;
+}
+.bars{
+    font-size: 20px;
+}
+.head-hr{
+    border: none;
+    height: 1.2px;
+    margin-top: 1px;
+    color: #000;
+    background-color: #000;
+}
+.input-container {
+      position: relative;
+      display: inline-block;
+      margin-top: 0px;
+    }
+    .input-container input {
+     margin-left: 6%;
+     width: 66%;
+     background: #e1e1e1;
+     margin-top: 8px;
+     border: none;
+     border-radius: 25px;
+     padding-left: 40px; 
+     height: 40px;
+     color: #000;
+     font-size: 16px;
+    }
+    .input-container svg {
+      position: absolute;
+      top: 50%;
+      left: 25px;
+      transform: translateY(-50%);
+      width: 24px;
+      height: 24px;
+      fill: #000;
+    }
+.slider-footer a {
+    color: #000;
+    font-size: 28px;
+    align-items: center;
+    display: flex;
+    margin-top: 14px;
+    margin-left: 5%;
+}
+#sliderFooter .material-symbols-outlined{
+    font-size: 28px;
