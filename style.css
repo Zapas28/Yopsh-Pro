@@ -806,10 +806,11 @@ a {
     margin-top: 14px;
     margin-left: 20px;
 }
-#inputPage{
-    border-bottom: 1px solid #000;
-}
 .input-bhai{
     height: 7%;
     overflow: hidden;
+}
+#inputPage{
+    position: fixed;
+    width: 100%;
 }
