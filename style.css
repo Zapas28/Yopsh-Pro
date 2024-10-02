@@ -765,13 +765,13 @@ a {
     }
     .input-bhai input {
         width: 66%;
-        background: transparent;
-        margin-top: 8px;
-        border: none;
-        border-radius: 25px;
-        height: 40px;
-        color: #000;
-        font-size: 16px;
+    background: transparent;
+    border: none;
+    margin-top: 2.64%;
+    border-radius: 25px;
+    height: 40px;
+    color: #000;
+    font-size: 16px;
     }
 .slider-footer a {
     color: #000;
