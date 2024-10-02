@@ -803,9 +803,13 @@ a {
     font-size: 32px;
 }
 #backToMainPage{
-    margin-top: 10px;
+    margin-top: 14px;
     margin-left: 20px;
 }
 #inputPage{
     border-bottom: 1px solid #000;
+}
+.input-bhai{
+    height: 7%;
+    overflow: hidden;
 }
